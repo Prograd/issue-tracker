@@ -41,6 +41,12 @@
     "printWidth": 100,
     "arrowParens": "avoid"
   },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",

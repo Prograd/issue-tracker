@@ -1,19 +1,23 @@
-import React from 'react';
 import styled from '@emotion/styled';
+import { Heading } from './ui-components/Heading';
+import { IssuesPage } from './features/issues/IssuesPage';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <HelloContainer>
-      <p>Hello react query</p>
-    </HelloContainer>
+    <Container>
+      <Heading>Issue Tracker</Heading>
+      <Routes>
+        <Route path="/" element={<IssuesPage />} />
+      </Routes>
+    </Container>
   );
 }
 
-const HelloContainer = styled('main')`
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+const Container = styled('div')`
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 50px;
 `;
 
 export default App;
